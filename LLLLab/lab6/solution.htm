@@ -1,0 +1,585 @@
+<!DOCTYPE html>
+<!-- saved from url=(0061)https://webcms3.cse.unsw.edu.au/COMP3331/20T2/resources/44934 -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="csrf-token" content="1598096243##aca3bbab92ccf868d5e9866587f1858a55831e26">
+    <title>Lab Exercise 6: Solutions |  COMP3331 20T2 | WebCMS3</title>
+
+    <link rel="icon" href="https://webcms3.cse.unsw.edu.au/static/img/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="https://webcms3.cse.unsw.edu.au/static/img/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" id="theme" href="./solution_files/lightblue.theme.44067b4b68fb1bc5f547f238785c61c1.css">
+
+
+  <style type="text/css"></style><style type="text/css">.select-box{position:absolute;border:1px solid #ddd;border-radius:3px;box-shadow:0 0 5px rgba(0,0,0,.1);background:#fff;z-index:1000}.mention{text-decoration:none!important;color:#000!important;background-color:#dce6f8;padding:0;margin-right:.5em}.user-select{list-style-type:none;list-style:none;margin:0;padding:0;font-family:Helvetica,Arial,sans-serif;font-size:14px;line-height:1.5}.user-select li{display:block;padding:5px 10px;font-weight:600;cursor:pointer;border-bottom:1px solid #ddd}.user-select li small{font-weight:400;color:#767676}.user-select .selected small{color:#fff}.user-select .selected{background-color:#4078c0;color:#fff}</style></head>
+  <body role="document" id="webcms3top">
+    <nav class="navbar navbar-default">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="https://webcms3.cse.unsw.edu.au/">WebCMS3</a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+                <li class="active"><a href="https://webcms3.cse.unsw.edu.au/COMP3331/20T2/" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Computer Networks">COMP9331</a></li>
+                <li><a href="https://webcms3.cse.unsw.edu.au/COMP9024/20T2/" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Data Structures and Algorithms">COMP9024</a></li>
+                <li><a href="https://webcms3.cse.unsw.edu.au/COMP9414/20T2/" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Artificial Intelligence">COMP9414</a></li>
+
+
+          </ul>
+          <ul class="nav navbar-nav navbar-right">
+              <li><a href="https://webcms3.cse.unsw.edu.au/search" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Search Courses"><i class="fa fa-search"></i></a></li>
+              <li class="dropdown">
+                <a href="https://webcms3.cse.unsw.edu.au/COMP3331/20T2/resources/44934#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+                  <div class="nav-profile-mask">
+                    <img class="profile_picture" src="./solution_files/default_avatar.png">
+                  </div>
+                  <span class="caret"></span>
+                </a>
+                <ul class="dropdown-menu" role="menu">
+                  <li><a href="https://webcms3.cse.unsw.edu.au/users/z5235242"><i class="fa fa-user"></i> Profile</a></li>
+                  <li><a href="https://webcms3.cse.unsw.edu.au/users/z5235242/settings"><i class="fa fa-cog"></i> Settings</a></li>
+                  <li class="divider"></li>
+                  <li><a href="https://webcms3.cse.unsw.edu.au/logout"><i class="fa fa-sign-in"></i> Logout</a></li>
+                </ul>
+              </li>
+            </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
+
+    <div class="container">
+
+      <div class="row row-offcanvas row-offcanvas-left">
+          <div class="col-sm-3 col-md-3 sidebar-offcanvas" id="sidebar" role="navigation">
+            <div class="sidebar hidden-print">
+  <div class="panel panel-default">
+    <!-- Default panel contents -->
+    <div class="panel-heading">
+      <h4 class="panel-title"><a href="https://webcms3.cse.unsw.edu.au/COMP3331/20T2/">COMP9331</a> <small>20T2</small></h4>
+    </div>
+
+  </div>
+
+  <ul class="list-group">
+            <li class="list-group-item ">
+          <a href="https://webcms3.cse.unsw.edu.au/COMP3331/20T2/">Home</a>
+        </li>        <li class="list-group-item ">
+          <a href="https://webcms3.cse.unsw.edu.au/COMP3331/20T2/outline">Course Outline</a>
+        </li>
+        <li class="list-group-item ">
+          <a href="https://webcms3.cse.unsw.edu.au/COMP3331/20T2/resources/44934#side-menu3" data-toggle="collapse" data-parent=".sidebar">
+            Course Work <span class="caret"></span>
+          </a>
+        </li>
+        <ul class="list-group collapse in" id="side-menu3">
+                  <li class="list-group-item ">
+          <a href="https://webcms3.cse.unsw.edu.au/COMP3331/20T2/resources/45005">Lectures</a>
+        </li>        <li class="list-group-item ">
+          <a href="https://webcms3.cse.unsw.edu.au/COMP3331/20T2/resources/45153">Echo 360 Lecture Recordings</a>
+        </li>        <li class="list-group-item ">
+          <a href="https://webcms3.cse.unsw.edu.au/COMP3331/20T2/resources/45214">Labs</a>
+        </li>        <li class="list-group-item ">
+          <a href="https://webcms3.cse.unsw.edu.au/COMP3331/20T2/resources/44907">Mid-term Exam</a>
+        </li>        <li class="list-group-item ">
+          <a href="https://webcms3.cse.unsw.edu.au/COMP3331/20T2/resources/45154">Assignment</a>
+        </li>        <li class="list-group-item ">
+          <a href="https://webcms3.cse.unsw.edu.au/COMP3331/20T2/resources/45220">Final Exam</a>
+        </li>        <li class="list-group-item ">
+          <a href="https://webcms3.cse.unsw.edu.au/COMP3331/20T2/resources/44938">Homework Questions</a>
+        </li>        <li class="list-group-item ">
+          <a href="https://taggi.cse.unsw.edu.au/FAQ/Really_quick_guide_to_VLAB/">VLAB</a>
+        </li>
+
+        </ul>
+        <li class="list-group-item ">
+          <a href="https://webcms3.cse.unsw.edu.au/COMP3331/20T2/forums/">Forums</a>
+        </li>        <li class="list-group-item ">
+          <a href="https://webcms3.cse.unsw.edu.au/COMP3331/20T2/timetable">Timetable</a>
+        </li>        <li class="list-group-item ">
+          <a href="https://webcms3.cse.unsw.edu.au/COMP3331/20T2/groups/">Groups</a>
+        </li>
+        <li class="list-group-item ">
+          <a href="https://webcms3.cse.unsw.edu.au/COMP3331/20T2/resources/44934#side-menu7" data-toggle="collapse" data-parent=".sidebar">
+            Staff <span class="caret"></span>
+          </a>
+        </li>
+        <ul class="list-group collapse" id="side-menu7">
+          
+
+                     <li class="list-group-item">
+    <a href="https://webcms3.cse.unsw.edu.au/users/z2260468">Wen Hu</a>
+    <span class="label label-primary">Lecturer</span>
+  </li>
+
+        <li class="list-group-item">
+    <a href="https://webcms3.cse.unsw.edu.au/users/z3116703">Salil Kanhere</a>
+    <span class="label label-primary">Lecturer</span>
+  </li>
+
+        <li class="list-group-item">
+    <a href="https://webcms3.cse.unsw.edu.au/users/z3004991">Mahbub Hassan</a>
+    <span class="label label-primary">Lecturer</span>
+  </li>
+
+        <li class="list-group-item">
+    <a href="https://webcms3.cse.unsw.edu.au/users/z5195667">Ayda Valinezhad Orang</a>
+    <span class="label label-primary">Course Admin</span>
+  </li>
+
+
+        <li class="list-group-item">
+    <a href="https://webcms3.cse.unsw.edu.au/users/z5175209">Nipuna Shanthidewa</a>
+    <span class="label label-default">Tutor</span>
+  </li>
+
+        <li class="list-group-item">
+    <a href="https://webcms3.cse.unsw.edu.au/users/z5138589">Mohammadali Yaghoubzadehfard</a>
+    <span class="label label-default">Tutor</span>
+  </li>
+
+        <li class="list-group-item">
+    <a href="https://webcms3.cse.unsw.edu.au/users/z5198433">Wei Song</a>
+    <span class="label label-default">Tutor</span>
+  </li>
+
+        <li class="list-group-item">
+    <a href="https://webcms3.cse.unsw.edu.au/users/z5231521">Adam Yi</a>
+    <span class="label label-default">Tutor</span>
+  </li>
+
+        <li class="list-group-item">
+    <a href="https://webcms3.cse.unsw.edu.au/users/z5189916">Pooja Gupta</a>
+    <span class="label label-default">Tutor</span>
+  </li>
+
+        <li class="list-group-item">
+    <a href="https://webcms3.cse.unsw.edu.au/users/z5262974">Isura Nirmal</a>
+    <span class="label label-default">Tutor</span>
+  </li>
+
+        <li class="list-group-item">
+    <a href="https://webcms3.cse.unsw.edu.au/users/z5188514">Jiayao Gao</a>
+    <span class="label label-default">Tutor</span>
+  </li>
+
+        <li class="list-group-item">
+    <a href="https://webcms3.cse.unsw.edu.au/users/z5168769">Ali Asghar Esmailpour Valmazouyi</a>
+    <span class="label label-default">Tutor</span>
+  </li>
+
+
+        </ul>
+        <li class="list-group-item ">
+          <a href="https://webcms3.cse.unsw.edu.au/COMP3331/20T2/activities/">Activities</a>
+        </li>
+
+
+  </ul>
+  <div class="panel panel-default">
+    <div class="panel-footer">
+
+      <div class="pull-right"> 
+        <a href="https://webcms3.cse.unsw.edu.au/COMP3331/20T2/users/grades" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Grades"><i class="fa fa-bar-chart"></i></a>
+        <a href="https://webcms3.cse.unsw.edu.au/COMP3331/20T2/blogs/" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Blog"><i class="fa fa-comment"></i></a>
+        <!--TODO: actual link and change icon-->
+        <a href="https://webcms3.cse.unsw.edu.au/COMP3331/20T2/wiki/" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Wiki"><i class="fa fa-asterisk"></i></a>
+      </div>
+      Tong Zhang<br>
+      <small>Student</small>
+    </div>
+  </div>
+  
+</div>
+          </div>
+          <div class="col-sm-9 col-md-9 main">
+            <p class="visible-xs hidden-print">
+              <button type="button" class="btn btn-primary btn-xs" data-toggle="offcanvas" id="toggle-menu"><i class="glyphicon glyphicon-chevron-left"></i> Toggle Menu</button>
+            </p>
+<ol class="breadcrumb">
+  <li>Resources</li>
+
+  <li><a href="https://webcms3.cse.unsw.edu.au/COMP3331/20T2/resources/44913">Lab Exercises</a></li>
+  <li class="active">Lab Exercise 6: Solutions</li>
+</ol>
+<div class="page-header with-breadcrumb">
+  <h1 style="display:inline;">Lab Exercise 6: Solutions</h1> 
+</div>
+
+<div class="row">
+  <div class="col-sm-12">
+     <div class="clearfix">
+
+
+    </div>
+
+  
+    <br>
+
+  
+
+
+             <h3 style="">
+  <b>
+   <span rel="font-size: 20px;">
+    Exercise 1: Setting up NS2 simulation (5 marks)
+   </span>
+  </b>
+  <br>
+ </h3>
+ <p>
+  Link to solution for NS2
+  <a href="https://webcms3.cse.unsw.edu.au/COMP3331/20T2/resources/44937" target="_blank">
+   tcl file
+  </a>
+  and throughput
+  <a href="https://webcms3.cse.unsw.edu.au/COMP3331/20T2/resources/44928" target="_blank">
+   script
+  </a>
+  .
+  <strong>
+   (3.5 marks)
+  </strong>
+ </p>
+ <p>
+  The throughput behaviour observed in the throughput plot is shown
+  <a href="https://webcms3.cse.unsw.edu.au/COMP3331/20T2/resources/45186" target="_blank">
+   here
+  </a>
+  .
+ </p>
+ <p>
+  Q1: Why the throughput achieved by flow tcp2 is higher than tcp1 between time span 6 sec to 8 sec?
+  <strong>
+   (0.5 mark)
+  </strong>
+ </p>
+ <p>
+  Answer: Flow tcp1 is competing with flow tcp4 (FTP4) on link n1 - n2.  It is again competing with tcp1 on link n2-n4. Flow tcp2 has less RTT than RTT for tcp1 thus TCP2 gets higher share of the bandwidth on link n2-n4 and eventually higher throughput is recorded at n5.
+ </p>
+ <p>
+  Q2: Why the throughput for flow tcp1 is fluctuating between time span 0.5 sec to 2 sec?
+  <strong>
+   (0.5 mark)
+  </strong>
+ </p>
+ <p>
+  Answer: Flow tcp1 is probing for available bandwidth using Slow Start mechanism.
+ </p>
+ <p>
+  Q3: Why is the maximum throughput achieved by any one flow capped at around 1.5Mbps?
+  <strong>
+   (0.5 mark)
+  </strong>
+ </p>
+ <p>
+  Answer: We have not permitted sole use of the Bandwidth for any one flow along its path to the destination. During time 0.5 - 2.0 sec, tcp1 is the only flow active but it is still in the SS phase and have to compete with other flows starting at 2.0 sec before it can discover the maximum bandwidth (2.5Mbps).
+ </p>
+ <p>
+  <b>
+   <span style="font-size: 20px;">
+    Exercise 2: Understanding IP Fragmentation (2.5 Marks)
+   </span>
+  </b>
+  <br>
+ </p>
+ <p>
+  Question 1:
+  <strong>
+   (0.5 Marks)
+  </strong>
+ </p>
+ <p>
+  MTU for Ethernet is 1500 bytes. Ping with default values produces 84 bytes IP datagram (48 bytes ICMP payload + 8 bytes ICMP time stamp + 8 bytes ICMP header + 20 bytes IP header). In our example both 2000 and 3500 bytes payload for ICMP would cause fragmentation. The initiating host would cause the fragmentation. For data size of 2000, IP gets a total payload of 2008 bytes (1992 bytes data + 8 bytes ICMP time stamp + 8 bytes ICMP header). It creates two fragments (No 16 and 17 in the capture file), of total length 1500 bytes and 548 bytes. Note that you have to remove the filter "ICMP" in order to see packet No 16.
+ </p>
+ <p>
+  Question 2:
+  <strong>
+   (0.5 Marks)
+  </strong>
+ </p>
+ <p>
+  Yes. The reply also get fragmented in three IPv4 datagrams. We cannot be sure who fragmented the original 3500 bytes reply but as it has to travel the last link to our sender, it is bound to be fragmented as the MTU for the last mile link is 1500 bytes.
+ </p>
+ <p>
+  Question 3:
+  <strong>
+   (0.5 Marks)
+  </strong>
+ </p>
+ <p>
+  Packet 39: ID=0x7a7b,  length=1500, flag=0x01(MF bit on), offset=0
+ </p>
+ <p>
+  Packet 40: ID=0x7a7b, length=1500, flag=0x01(MF bit on), offset=1480
+ </p>
+ <p>
+  Packet 41: ID=0x7a7b, length=568, flag=0, offset=2960
+ </p>
+ <p>
+  Note that Wireshark reports the fragment offsets of data in Bytes while the actual frag offset field in IP header contains different values (1480/8=185)
+ </p>
+ <p>
+  Question 4:
+  <strong>
+   (0.5 Marks)
+  </strong>
+ </p>
+ <p>
+  We cannot be sure if the fragmentation of fragments has happened for our echo request from 192.168.1.103 towards 8.8.8.8 as we are only capturing packets at 192.168.1.103. No fragmentation of fragments has occurred for the reply from 8.8.8.8 for data size of 3500. Recall that reassembly is only done at the destination. As 192.168.1.103 is the destination for the reply and we have received only three fragments, fragmentation of fragments has not be done.
+ </p>
+ <p>
+  Question 5:
+  <strong>
+   (0.5 Marks)
+  </strong>
+ </p>
+ <p>
+  If we are using a reliable transport protocol such as TCP, the sender has to eventually retransmit all the fragments again. In our example, the fragments would be incomplete and we will not see any reply as the receiver would discard it.
+ </p>
+ <h3>
+  Exercise 3: Understanding the Impact of Network Dynamics on Routing (2.5 marks)
+  <br>
+ </h3>
+ <p>
+  Question 1.
+  <strong>
+   (0.5 Marks)
+  </strong>
+  <strong>
+  </strong>
+ </p>
+ <p>
+  Node 0 is sending packets to node 5 and Node 2 is transmitting to Node 5. The transmitted packets follow the route 0-1-4-5 &amp; 2-3-5 respectively and the routes does not change over time.
+ </p>
+ <p>
+  Question 2.
+  <strong>
+   (0.5 Marks)
+  </strong>
+  <strong>
+  </strong>
+ </p>
+ <p>
+  At time t=1.0, link 1-4 goes down, but the route between node 0 and node 5 does not change. As a result node 0 is unable to reach node 5.
+ </p>
+ <p>
+  At time t=1.2, link 1-4 goes up again, and the packets that were waiting at node 1 are now forwarded to node 4 and, eventually node 5.
+  <br>
+ </p>
+ <p>
+  Traffic between Node 2 and 5 remains unaffected.
+ </p>
+ <p>
+  Question 3.
+  <strong>
+   (0.5 Marks)
+  </strong>
+ </p>
+ <p>
+  We observe additional control traffic whereby DV protocol is exchanging information to build its forwarding table. Now, when link 1-4 goes down, the DV routing protocol discovers a different route (0-1-2-3-5) and uses it. Once link 1- 4 becomes available again, the routing protocol reverts to the original route (0-1-4-5), since it has a lower cost (in terms of number of hops to destination).
+  <br>
+ </p>
+ <p>
+  Question 4.
+  <strong>
+   (0.5 Marks)
+  </strong>
+ </p>
+ <p>
+  This changes the cost of link 1-4 to 3 (the cost of the rest of the links is assumed to be 1, implicitly). We can notice that the flow between Nodes 0 and 5 now uses route 0-1-2-3-5 (total cost=4), because the cost of this route becomes lower that the cost of 0-1-4-5 (total cost=5).
+  <br>
+ </p>
+ <p>
+  Question 5.
+  <strong>
+   (0.5 Marks)
+  </strong>
+  <strong>
+  </strong>
+ </p>
+ <p>
+  Consider the route between Nodes 0-5 and 2-5 in this scenario. Total cost between Nodes 0-5 is 5 through route 0-1-4-5 and the total cost is 6 through route 0-1-2-3-5. Flow follows the total least cost path. However, for traffic between 2-5 we have two routes of equal total cost 2-3-5 and 2-1-4-5. Both routes now have equal cost to the destination. Since the network is now using multipath routing, node 2 will split traffic equally on both these paths.
+ </p>
+            <div class="clearfix">
+              <p class="pull-left"><small>Resource created <abbr class="timeago" title="Wednesday 29 April 2020, 03:56:57 PM">4 months ago</abbr>, last modified <abbr class="timeago" title="Sunday 09 August 2020, 01:40:40 PM">13 days ago</abbr>.</small></p>
+            </div>
+
+
+    <div class="panel panel-default"><div class="panel-heading clearfix"><h3 class="panel-title">
+      Comments
+      <div role="group" class="btn-group btn-group-xs pull-right comment-frame-header"><a title="Click to Subscribe" class="btn btn-default btn-xs"><i class="fa fa-bookmark-o"></i></a> <a title="Search" href="https://webcms3.cse.unsw.edu.au/COMP3331/20T2/forums/search?forum_choice=resource/44934" class="btn btn-default btn-xs"><i class="fa fa-search"></i></a> <a title="Forum View" href="https://webcms3.cse.unsw.edu.au/COMP3331/20T2/forums/resource/44934" class="btn btn-default btn-xs"><i class="fa fa-comments"></i></a></div></h3></div> <div class="panel-body"><!----> <div style="position: relative;"><i class="fa fa-fw fa-comment-o" style="position: absolute; padding: 10px; color: rgb(153, 153, 153);"></i> <input type="text" placeholder="Add a comment" class="form-control" style="padding-left: 30px;"></div> <!----> <hr> <ul class="comment-wrapper"></ul> <div><span class="no-messages-error">There are no comments yet.</span></div> <!----> <!----></div></div>
+  </div>
+</div>
+          </div>
+      </div>
+      <div class="row hidden-print">
+        <div class="col-sm-12">
+          <hr>
+          <p class="pull-right"><a href="https://webcms3.cse.unsw.edu.au/COMP3331/20T2/resources/44934#webcms3top">Back to top <i class="fa fa-caret-up"></i></a></p>
+          <div class="pull-left">
+
+          <strong>COMP3331/COMP9331 20T2 (Computer Networks)</strong>
+          is powered by <a href="https://webcms3.cse.unsw.edu.au/about">WebCMS3</a>
+          <h6><small>CRICOS Provider No. 00098G</small></h6>
+        </div>
+      </div>
+    </div>
+
+
+    <script src="./solution_files/manifest.cfb3a155968bb33441c3.js"></script>
+    <script src="./solution_files/vendor.ccafba1973f262c84499.js"></script>
+    <script src="./solution_files/app.b49dff5297717517af10.js"></script>
+
+
+
+<script>
+
+    webcms.renderComments("#messaging-wrapper", {
+      object_type: 'resource',
+      object_id: 44934,
+      url: '/messages/',
+      course: '3314',
+  });
+
+</script>
+
+<script>
+$(function() {
+  $('*[data-bootbox="resource-delete-heading"]').each(function() {
+    $(this).click(function(e) {
+      e.preventDefault();
+      var location = $(this).attr('href');
+      bootbox.dialog({
+        message: "Are you sure you wish to delete this resource heading?",
+        buttons: {
+          main: {
+            label: "No",
+            className: "btn-default",
+            callback: function() { }
+          },
+          children: {
+            label: "Yes, and delete all children too",
+            className: "btn-primary",
+            callback: function() {
+              window.location.replace(location + "?children=1");
+            }
+          },
+          just: {
+            label: "Yes, and move children to parent",
+            className: "btn-primary",
+            callback: function() {
+              window.location.replace(location);
+            }
+          }
+        }
+      });
+    });
+  });
+
+});
+</script>
+
+<script>
+$(function() {
+  $('*[data-bootbox="resource-delete"]').each(function() {
+    $(this).click(function(e) {
+      e.preventDefault();
+      var location = $(this).attr('href');
+
+      bootbox.confirm("Are you sure you wish to delete this resource?", function(confirmed) {
+        if (confirmed) {
+          window.location.replace(location);
+        }
+      });
+    });
+  });
+});
+</script>
+
+
+
+    <script>
+      jQuery.timeago.settings.allowFuture = true;
+
+      $(function() {
+        $('*[id^="redactor"]').each(function () {
+          $(this).redactor({
+            imageUpload: "/files/redactor/upload",
+            plugins: ['table', 'fontsize', 'fontcolor', 'video', 'template']
+          });
+
+        });
+          $('.redactor').redactor({
+            imageUpload: "/files/redactor/upload",
+            plugins: ['table', 'fontsize', 'fontcolor', 'video', 'template']
+          });
+      });
+
+      $(document).ready(function() {
+        /* hack to remove awful extra padding */
+        $('.redactor-box').attr('style', 'margin: 0 !important; padding: 0 !important;');
+
+        /* force text cursor in redactor editing field */
+        $('.redactor-editor').each(function () {
+          $(this).attr('style', 'cursor: text;');
+        });
+      });
+
+      $(document).ready(function() {
+        $('[data-toggle=buttons]').click(function() {
+          /* hack to get toolbar to show */
+          setTimeout(function() {$('.redactor').scroll()}, 0);
+        });
+      });
+
+    </script>
+    <script>
+        $(document).on('change', '.btn-file :file', function() {
+          var input = $(this),
+              numFiles = input.get(0).files ? input.get(0).files.length : 1,
+              label = input.val().replace(/\\/g, '/').replace(/.*\//, '');
+          input.trigger('fileselect', [numFiles, label]);
+        });
+
+        $(document).ready( function() {
+            $('.btn-file :file').on('fileselect', function(event, numFiles, label) {
+                var input = $(this).parents('.input-group').find(':text'),
+                    log = numFiles > 1 ? numFiles + ' files selected' : label;
+                if (input.length) {
+                    input.val(log);
+                } else {
+                    if (log) alert(log);
+                }
+            });
+        });
+
+      $('[data-toggle="popover"]').popover();
+    </script>
+
+    <script type="text/javascript">
+      jQuery(document).ready(function() {
+        jQuery("abbr.timeago").timeago();
+      });
+
+      $(function() {
+        $('[data-toggle="tooltip"]').tooltip()
+      })
+      $(document).ready(function() {
+        $('[data-toggle=offcanvas]').click(function() {
+          $('.row-offcanvas').toggleClass('active');
+        });
+      });
+    </script>
+
+
+
+
+  
+</div></body></html>
